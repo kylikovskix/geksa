@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0099cc"
+    tools:context=".FullscreenActivity">
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+
+    <!-- This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows. -->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="5dp">
+
+        <ImageButton
+            android:id="@+id/btnConnect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_horizontal|top"
+            android:background="@null"
+            app:srcCompat="@drawable/connect_off" />
+
+        <ImageView
+            android:id="@+id/btnMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/static_mode" />
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|center_vertical">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:adjustViewBounds="true"
+                android:cropToPadding="false"
+                app:srcCompat="@drawable/geksa1024" />
+
+            <ImageButton
+                android:id="@+id/btnPower"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:padding="15dp"
+                app:srcCompat="@drawable/power_off" />
+
+            <Button
+                android:id="@+id/btnLeftFrontFootCoxa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|left"
+                android:background="@drawable/button_background"
+                android:minWidth="44dp"
+                android:minHeight="24dp"
+                android:text="0" />
+
+            <Button
+                android:id="@+id/btnLeftFrontFootFemora"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|left"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button_background"
+                android:minWidth="44dp"
+                android:minHeight="24dp"
+                android:text="0" />
+
+            <Button
+                android:id="@+id/btnLeftFrontFootTibia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|left"
+                android:background="@drawable/button_background"
+                android:minWidth="44dp"
+                android:minHeight="24dp"
+                android:text="0" />
+
+            <Button
+                android:id="@+id/btnLeftMidleFootCoxa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|left"
+                android:background="@drawable/button_background"
+                android:minWidth="44dp"
+                android:minHeight="24dp"
+                android:text="0" />
+
+            <Button
+                android:id="@+id/btnLeftMidleFootFemora"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|left"
+                android:background="@drawable/button_background"
+                android:minWidth="44dp"
+                android:minHeight="24dp"
+                android:text="0" />
+
+            <Button
+                android:id="@+id/btnLeftMidleFootTibia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|left"
+                android:background="@drawable/button_background"
+                android:minWidth="44dp"
+                android:minHeight="24dp"
+                android:text="0" />
+
+            <Button
+                android:id="@+id/btnLeftBackFootCoxa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|left"
+                android:background="@drawable/button_background"
+                android:minWidth="44dp"
+                android:minHeight="24dp"
+                android:text="0" />
+
+            <Button
+                android:id="@+id/btnLeftBackFootFemora"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|left"
+                android:background="@drawable/button_background"
+                android:minWidth="44dp"
+                android:minHeight="24dp"
+                android:text="0" />
+
+            <Button
+                android:id="@+id/btnLeftBackFootTibia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|left"
+                android:background="@drawable/button_background"
+                android:minWidth="44dp"
+                android:minHeight="24dp"
+                android:text="0" />
+
+            <Button
+                android:id="@+id/btnRigthFrontFootCoxa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|top"
+                android:background="@drawable/button_background"
+                android:minWidth="44dp"
+                android:minHeight="24dp"
+                android:text="0" />
+
+            <Button
+                android:id="@+id/btnRigthFrontFootFemora"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|top"
+                android:background="@drawable/button_background"
+                android:minWidth="44dp"
+                android:minHeight="24dp"
+                android:text="0" />
+
+            <Button
+                android:id="@+id/btnRigthFrontFootTibia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|top"
+                android:background="@drawable/button_background"
+                android:minWidth="44dp"
+                android:minHeight="24dp"
+                android:text="0" />
+
+            <Button
+                android:id="@+id/btnRigthMidleFootCoxa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|right"
+                android:background="@drawable/button_background"
+                android:minWidth="44dp"
+                android:minHeight="24dp"
+                android:text="0" />
+
+            <Button
+                android:id="@+id/btnRigthMidleFootFemora"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|right"
+                android:background="@drawable/button_background"
+                android:minWidth="44dp"
+                android:minHeight="24dp"
+                android:text="0" />
+
+            <Button
+                android:id="@+id/btnRigthMidleFootTibia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|right"
+                android:background="@drawable/button_background"
+                android:minWidth="44dp"
+                android:minHeight="24dp"
+                android:text="0" />
+
+            <Button
+                android:id="@+id/btnRigthBackFootCoxa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|right"
+                android:background="@drawable/button_background"
+                android:minWidth="44dp"
+                android:minHeight="24dp"
+                android:text="0" />
+
+            <Button
+                android:id="@+id/btnRigthBackFootFemora"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|right"
+                android:background="@drawable/button_background"
+                android:minWidth="44dp"
+                android:minHeight="24dp"
+                android:text="0" />
+
+            <Button
+                android:id="@+id/btnRigthBackFootTibia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="false"
+                android:layout_alignParentBottom="false"
+                android:layout_gravity="bottom|right"
+                android:background="@drawable/button_background"
+                android:minWidth="44dp"
+                android:minHeight="24dp"
+                android:text="0" />
+
+        </FrameLayout>
+
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom">
+
+        <LinearLayout
+            android:id="@+id/gvMove"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/btnMoveFront"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/front" />
+
+            <ImageView
+                android:id="@+id/btnMoveBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/back" />
+
+            <ImageView
+                android:id="@+id/btnMoveLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/left" />
+
+            <ImageView
+                android:id="@+id/btnMoveRigth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/rigth" />
+
+            <ImageView
+                android:id="@+id/btnStop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/stop" />
+        </LinearLayout>
+
+    </FrameLayout>
+
+</FrameLayout>

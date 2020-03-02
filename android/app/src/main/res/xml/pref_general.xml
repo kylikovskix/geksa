@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:text=""
+        android:title="@string/connection_settings_title">
+
+        <EditTextPreference
+            android:defaultValue="192.168.1.29:2000"
+            android:key="@string/host_address_key"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/host_address_title" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/move_settings_title">
+
+        <Preference
+            android:key="@string/front_speed_key"
+            android:title="@string/front_speed_title" />
+
+        <Preference
+            android:key="@string/back_speed_key"
+            android:title="@string/back_speed_title" />
+
+        <Preference
+            android:key="@string/left_rotate_speed_key"
+            android:title="@string/left_rotate_speed_title" />
+
+        <Preference
+            android:key="@string/rigth_rotate_speed_key"
+            android:title="@string/rigth_rotate_speed_title" />
+    </PreferenceCategory>
+</PreferenceScreen>

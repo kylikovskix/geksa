@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Гекса</string>
+
+    <string name="settings">Настройки</string>
+    <string name="connection_settings_title">Настройки связи</string>
+    <string name="host_address_title">TCP адрес</string>
+    <string name="move_settings_title">Настройки движения</string>
+    <string name="front_speed_title">Скорость движения вперед</string>
+    <string name="back_speed_title">Скорость движения назад</string>
+    <string name="left_rotate_speed_title">Скорость поворота влево</string>
+    <string name="rigth_rotate_speed_title">Скорость поворота вправо</string>
+
+    <string name="host_address_key">host_address</string>
+    <string name="front_speed_key">front_speed_</string>
+    <string name="back_speed_key">back_speed_</string>
+    <string name="left_rotate_speed_key">left_rotate_speed</string>
+    <string name="rigth_rotate_speed_key">rigth_rotate_speed</string>
+
+    <string name="ok_text">Ok</string>
+    <string name="cancel_text">Отмена</string>
+    <string name="current_value_text">Value</string>
+    <string name="input_angle_value_text">Введите значение угола</string>
+
+</resources>
