@@ -1,4 +1,4 @@
-#include <CmdProc.h>
+﻿#include <CmdProc.h>
 
 CommandProcessor::CommandProcessor(HardwareSerial* pSerial) {
   mBuff_pos = 0;
@@ -8,7 +8,6 @@ CommandProcessor::CommandProcessor(HardwareSerial* pSerial) {
   m_pFirst = NULL;
 }
 
-// ��������� ��������� ������� � ��������� �����
 void CommandProcessor::add(const char* command) {
   int len = strlen(command);
   if(mCmd_pos + len + 1 < CMD_SIZE) {
@@ -19,7 +18,6 @@ void CommandProcessor::add(const char* command) {
   }
 }
 
-// ��������� ������� ��������� ������, 
 void CommandProcessor::loop() {
   
   if(m_pSerial != NULL) { 
@@ -41,7 +39,6 @@ void CommandProcessor::loop() {
   }
 }
 
-// ��������� ������ ������
 void CommandProcessor::parseString(char* str) {
   
   int len = strlen(str);
@@ -60,12 +57,9 @@ void CommandProcessor::parseString(char* str) {
   }
 }
 
-// ������ ��������� �������.
-// ������ �������: �����_������� ��������1 ��������2 ...
-// ����������� �� ����� N ����������
 void CommandProcessor::parseCommand(char* str) {
-  const char* args[MAX_ARG_COUNT]; // ��������� ���������
-  int count = 0;  // ���������� ����������
+  const char* args[MAX_ARG_COUNT]; 
+  int count = 0;  
   int len = strlen(str);
   char* s1 = str;
   
@@ -78,8 +72,8 @@ void CommandProcessor::parseCommand(char* str) {
   while(strchr("\t ",*s1) != 0) {s1++;};
   
   while (s1 - str < len) {
-    char* s2  = strchr(s1,' ');  // ������� ������� ���������� �����������
-    if (s2 != NULL) { // �������� ��������� ��������
+    char* s2  = strchr(s1,' ');  
+    if (s2 != NULL) { 
       *s2 = 0;
       args[count++] = s1;
       s1 = s2 + 1;
@@ -87,7 +81,6 @@ void CommandProcessor::parseCommand(char* str) {
       args[count++] = s1;
       break;
     }
-    // ����������� �� ���������� ����������
     if (count >= MAX_ARG_COUNT) break;
   }
 
@@ -116,7 +109,6 @@ void CommandProcessor::parseCommand(char* str) {
     } 
 }  
 
-// ��������� ����������� ������� � �� �����������
 void CommandProcessor::registerHandler(const char* command, CommandHandler* handler) {
   CommandItem* pItem = new CommandItem(command,handler);
   pItem->pNext = m_pFirst;

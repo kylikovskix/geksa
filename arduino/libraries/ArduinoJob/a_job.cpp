@@ -1,4 +1,4 @@
-#include <a_job.h>
+﻿#include <a_job.h>
 #include <Arduino.h>
 
 void AJob::onInit() {}
@@ -148,46 +148,34 @@ void AJob_Test::onDone() {
 
 void ArduinoJob_Test(const int N, Print* pCon) {
   AJobManager manager;  
-  AJob_Test* ppJob[N];  // ��������� ������ �����
+  AJob_Test* ppJob[N]; 
                           
-  // ������� ������ 
   for(int i=0; i < N; i++)
     ppJob[i] = new AJob_Test(&manager, i+1, pCon, (unsigned long)(i*50));
     
   manager.setup();   
       
-  // ��������� ������ ��������� ����� 
   for(int i=0; i < 100; i++)
     manager.loop();         
       
-  // ���������� ���� ������ 
-  // ������������� ������ ���� ������ AJobManager::deattach()
   if(N > 0)
     ppJob[0]->finish();
     
-  // ��������� ������ ��������� ����� ��� ���
   for(int i=0; i < 100; i++) {
     manager.loop();           
     delay(10);
   }
     
-  // ����� ����������� ������ 
-  // ���� ������ ������������� ������� AJobManager::deattach()
   if(N > 1) {
     delete ppJob[1];
     ppJob[1] = NULL;      
   }
       
-  // ��� ��� ��������� ������ ��������� �����
   for(int i=0; i < 100; i++) {
     manager.loop();           
     delay(10);
   }
                           
-  // ������������� ��������� ��� ������ �� ������
-  //manager.deattachAll();       
-        
-  // ������� ������
   for(int i=0; i < N; i++) {
     if(ppJob[i] != NULL)
       delete ppJob[i];         

@@ -8,7 +8,7 @@
 const char SIGN[] = "esp_86_xx_kulibin_v1";
 const char DEF_PASSWORD[] = "88888888";
 
-void(* resetFunc) (void) = 0; //��������� ������� reset � ������� 0
+void(* resetFunc) (void) = 0; 
      
 ESP8266_v1::ESP8266_v1(const char* title, Print* pCon, int portNumber):m_wServer(portNumber) {
   m_title = title;   
@@ -32,7 +32,6 @@ void ESP8266_v1::setup() {
   }
   EEPROM.end();
 
-  // ������������ � WiFi � �������� �����������
   WiFi.begin(m_config.ssid, m_config.password);
   if(m_pCon != NULL) {
     m_pCon->print("-- Connect to ");
@@ -44,13 +43,12 @@ void ESP8266_v1::setup() {
 
   if(m_pCon == NULL) {
   } else if(WiFi.status() == WL_CONNECTED) {
-    m_pCon->print("Ok, IP=");  //  "IP-�����: "
+    m_pCon->print("Ok, IP=");  
     m_pCon->println(WiFi.localIP());
   } else { 
     m_pCon->println("Failed");
   }
 
-  // ���������� ��������� ����� �������
   byte mac[6];
   WiFi.macAddress(mac);
   sprintf(m_config.ssid,"%s_%X_%X_%X_%X_%X_%X",m_title,mac[0],mac[1],mac[2],mac[3],mac[4],mac[5]);
@@ -61,7 +59,6 @@ void ESP8266_v1::setup() {
     m_pCon->print(m_config.ssid);
   }  
 
-  //  "��������� ����������� ����� ������� ... "
   WiFi.enableAP(true); 
   delay(1000);
   

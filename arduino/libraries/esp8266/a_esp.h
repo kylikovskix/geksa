@@ -1,14 +1,5 @@
-#ifndef A_ESP
+﻿#ifndef A_ESP
 #define A_ESP
-
-/*
-����������: ��������� ������� ������ ������ ESP82XX
-������: 1.0
-������: 03.10.2019
-�������:
-�����: ����������� ������
-E-mail: kylikovskix@gmail.com 
-*/
 
 #include <ESP8266WiFi.h>
 #include <ESP8266WebServer.h>
